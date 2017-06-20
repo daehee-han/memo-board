@@ -2,4 +2,8 @@
 
 {% block content %}
 <h1>Memo Main</h1>
+{% for memo in memo_list %}
+<h1>{{ memo.text }}</h1>
+<h2>{{ memo.upload_time }}</h2>
+{% endfor %}
 {% endblock %}
