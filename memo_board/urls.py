@@ -20,7 +20,7 @@ from service import views
 
 urlpatterns = [
     url(r'^$', views.main_view,name='main'),
-    url('^accounts/register$', views.register_view, name='register'),
+    url('^accounts/register/$', views.register_view, name='register'),
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]
