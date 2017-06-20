@@ -2,4 +2,15 @@
 
 {% block content %}
 
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    <label>Username <input autofocus="" type="text" name="username"></label>
+    <label>Password <input type="password" name="password"></label>
+    <button type="submit">Login</button>
+</form>
+
 {% endblock %}
