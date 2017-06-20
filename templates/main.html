@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Memo Main</h1>
+
 {% for memo in memo_list %}
-<h1>{{ memo.text }}</h1>
-<h2>{{ memo.upload_time }}</h2>
+<h4>{{ memo.text }}</h4>
+<p>{{ memo.upload_time.strftime('%Y-%m-%d-%H:%M') }}</p>
 {% endfor %}
+
 {% endblock %}
