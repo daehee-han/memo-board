@@ -19,4 +19,4 @@ $ python manage.py runserver
 ## ETC
 
 - Jinja2 Template Engine을 사용하였다.
-- Python 3.5+, Django 1.11+ 환경에서 작성한 코드들이다.
+- `Python 3.5+`, `Django 1.11+` 환경에서 작성한 코드들이다.
