@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from service import views
+
 urlpatterns = [
-    url(r'^$', ,name='main'),
-    url(r'^accounts/', include('accounts.urls')),
+    url(r'^$', views.main_view,name='main'),
+    url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]
