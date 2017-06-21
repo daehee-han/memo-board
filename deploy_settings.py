@@ -10,5 +10,5 @@ assert(PYTHON_VERSION in ('3.4', '2.7'))
 IS_SKIP_PYTHON_DEPLOYMENT = False
 
 # Azure WebApp 상에서 collectstatic 명령을 수행하지 않으실려면, True로 설정해주세요.
-IS_SKIP_DJANGO_EXTRA = False
+IS_SKIP_DJANGO_EXTRA = True
 
