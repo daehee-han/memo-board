@@ -8,27 +8,9 @@
     }
 </style>
 
-<!--
-<h3>MEMO</h3>
-{% if request.user.is_authenticated() %}
-<form method="POST">
-    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    <textarea autofocus="" name="memo" rows="4" cols="50"></textarea>
-    <button type="submit">Upload</button>
-</form>
-{% else %}
-<p>If you want to post message on the wall, please login first.</p>
-{% endif %}
-
-{% for memo in memo_list %}
-<h4>{{ memo.text }}</h4>
-<p>{{ memo.upload_time.strftime('%Y-%m-%d-%H:%M') }}</p>
-{% endfor %}
--->
-
 <div class="container">
     <div class="starter-template">
-        <h1>MEMO</h1>
+        <h1 style="font-weight: bold; color: blue;">MEMO</h1>
         {% if request.user.is_authenticated() %}
         <div class="form-group">
             <form method="POST">
@@ -48,6 +30,7 @@
         {% for memo in memo_list %}
         <h4>{{ memo.text }}</h4>
         <p>{{ memo.upload_time.strftime('%Y-%m-%d-%H:%M') }}</p>
+        <hr>
         {% endfor %}
     </div>
 </div><!-- /.container -->
