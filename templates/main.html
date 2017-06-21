@@ -12,6 +12,7 @@
     <div class="starter-template">
         <h1 style="font-weight: bold; color: blue;">MEMO</h1>
         {% if request.user.is_authenticated() %}
+        <!-- Post message on the wall -->
         <div class="form-group">
             <form method="POST">
                 <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
@@ -28,11 +29,13 @@
         {% endif %}
 
         {% for memo in memo_list %}
+        <!-- Text -->
         <h4>{{ memo.text }}</h4>
+        <!-- Upload time -->
         <p>{{ memo.upload_time.strftime('%Y-%m-%d-%H:%M') }}</p>
         <hr>
         {% endfor %}
     </div>
-</div><!-- /.container -->
+</div>
 
 {% endblock %}
